@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,17 +34,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      
-      _counter++;
-    });
-  }
 
-//   @override
-//   Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
    
     return Scaffold(
       appBar: AppBar(
@@ -52,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
        
         title: Text(widget.title),
       ),
-      body: Text("hi")
+      body: HomePage()
     );
   }
 }
