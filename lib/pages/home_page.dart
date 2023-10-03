@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/pages/product_details_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,8 +8,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(
-        child: Image.asset('assets/icons/record.png'),
+      body: InkWell(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ProductDetailsPage()));
+        },
+        child: Container(
+          child: Image.asset(
+            'assets/icons/vector2.png',
+            width: 50,
+            height: 50,
+          ),
+        ),
       ),
     );
   }
