@@ -7,6 +7,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      body: Container(
+        child: Image.asset('assets/icons/record.png'),
+      ),
     );
   }
 }
