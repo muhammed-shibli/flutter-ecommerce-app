@@ -8,7 +8,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: InkWell(
+      body: Column(
+        children: [
+          InkWell(
         onTap: () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => ProductDetailsPage()));
@@ -21,6 +23,8 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+        ],
+      )
     );
   }
 }
