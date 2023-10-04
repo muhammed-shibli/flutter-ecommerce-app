@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/pages/product_details_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,7 +27,12 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => ProductDetailsPage()));
+                },
                 child: CircleAvatar(
                   // radius: 28,
                   backgroundColor: Color(0xffF5F6FA),
