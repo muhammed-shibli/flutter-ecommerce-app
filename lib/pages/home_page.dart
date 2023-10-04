@@ -7,24 +7,40 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          InkWell(
-        onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ProductDetailsPage()));
-        },
-        child: Container(
-          child: Image.asset(
-            'assets/icons/vector2.png',
-            width: 50,
-            height: 50,
+        appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            child: InkWell(
+              onTap: () {},
+              child: CircleAvatar(
+                // radius: 28,
+                backgroundColor: Color(0xffF5F6FA),
+                child: Image.asset(
+                  'assets/icons/menu.png',
+                  height: 25,
+                ),
+              ),
+            ),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              child: InkWell(
+                onTap: () {},
+                child: CircleAvatar(
+                  // radius: 28,
+                  backgroundColor: Color(0xffF5F6FA),
+                  child: Image.asset(
+                    'assets/icons/cart.png',
+                    height: 25,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
-        ],
-      )
-    );
+        body: Column(
+          children: [],
+        ));
   }
 }
