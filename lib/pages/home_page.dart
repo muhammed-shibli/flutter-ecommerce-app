@@ -2,7 +2,6 @@ import 'package:ecommerce_app/pages/product_details_page.dart';
 import 'package:ecommerce_app/widgets/choose_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class HomePage extends StatelessWidget {
    
@@ -67,67 +66,21 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      // bottomNavigationBar: SalomonBottomBar(
-      //   // unselectedItemColor: Colors.grey,
-      //   currentIndex: currentIndex,
-      //   onTap: (value) {
-      //     setState(() {
-      //       currentIndex = value;
-      //     });
-      //   },
-      //   items: [
-      //     SalomonBottomBarItem(
-      //       icon: Image.asset(
-      //         'assets/icons/home.png',
-      //         color: Colors.black,
-      //         width: 22,
-      //         height: 22,
-      //       ),
-      //       title: Text("Home"),
-      //       selectedColor: Colors.purple,
-      //       // unselectedColor: Colors.grey,
-      //     ),
-      //     SalomonBottomBarItem(
-      //       icon: Image.asset(
-      //         'assets/icons/like.png',
-      //         color: Colors.black,
-      //         width: 22,
-      //         height: 22,
-      //       ),
-      //       title: Text("Whislist"),
-      //       selectedColor: Colors.purple,
-      //     ),
-      //     SalomonBottomBarItem(
-      //       icon: Image.asset(
-      //         'assets/icons/cart.png',
-      //         color: Colors.black,
-      //         width: 25,
-      //         height: 25,
-      //       ),
-      //       title: Text("Orders"),
-      //       selectedColor: Colors.purple,
-      //     ),
-      //     SalomonBottomBarItem(
-      //       icon: const Icon(CupertinoIcons.person),
-      //       title: Text("Profile"),
-      //       selectedColor: Colors.purple,
-      //     ),
-      //   ],
-      // ),
+      
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+             const Text(
                 'Hello',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Text(
+             const Text(
                 'Welcome to shibili',
                 style: TextStyle(
                   fontSize: 15,
@@ -135,7 +88,7 @@ class HomePage extends StatelessWidget {
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(
+             const SizedBox(
                 height: 20,
               ),
               Row(
@@ -148,7 +101,7 @@ class HomePage extends StatelessWidget {
                         filled: true,
                         fillColor: Colors.grey[100],
                         hintText: 'Search...',
-                        hintStyle: TextStyle(
+                        hintStyle:const TextStyle(
                           fontSize: 16,
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
