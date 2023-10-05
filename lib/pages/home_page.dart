@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
     List brandNames = [
       'Adidas',
       'Fila',
-      'Nike',
+      'Niklle',
       'Puma',
     ];
 
