@@ -1,3 +1,6 @@
+import 'package:ecommerce_app/pages/address_page.dart';
+import 'package:ecommerce_app/pages/cart_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsPage extends StatefulWidget {
@@ -25,10 +28,19 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              CupertinoPageRoute(
+                builder: (context) => AddressPage(),
+              ),
+            );
+          },
           child: Text("Add to Cart",
               style: TextStyle(color: Colors.white, fontSize: 17)),
-          style: ButtonStyle(shape: MaterialStatePropertyAll( BeveledRectangleBorder(borderRadius: BorderRadius.circular(0))),
+          style: ButtonStyle(
+              shape: MaterialStatePropertyAll(BeveledRectangleBorder(
+                  borderRadius: BorderRadius.circular(0))),
               backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
               fixedSize: MaterialStatePropertyAll(Size(double.infinity, 50)))),
       body: Stack(
@@ -194,6 +206,12 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                   InkWell(
                     onTap: () {
                       // Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => CartPage(),
+                        ),
+                      );
                     },
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
