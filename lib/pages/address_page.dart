@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/pages/card_details_page.dart';
 import 'package:ecommerce_app/widgets/common_textfields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,10 @@ class _AddressPageState extends State<AddressPage> {
         centerTitle: true,
       ),
       bottomNavigationBar: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, CupertinoPageRoute(builder: (context) => AddCard()));
+        },
         child: Text(
           "Save Address",
           style: TextStyle(color: Colors.white, fontSize: 17),
