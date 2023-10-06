@@ -3,9 +3,20 @@ import 'package:ecommerce_app/widgets/choose_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-   
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  // bool addLike = false;
+  // void isLiked(int index) {
+  //   setState(() {
+  //     addLike = true;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +39,7 @@ class HomePage extends StatelessWidget {
       'assets/icons/tshirt.png',
       'assets/icons/tshirt(1).png',
     ];
+
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
@@ -66,21 +78,20 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             const Text(
+              const Text(
                 'Hello',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-             const Text(
+              const Text(
                 'Welcome to shibili',
                 style: TextStyle(
                   fontSize: 15,
@@ -88,7 +99,7 @@ class HomePage extends StatelessWidget {
                   color: Colors.grey,
                 ),
               ),
-             const SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -101,7 +112,7 @@ class HomePage extends StatelessWidget {
                         filled: true,
                         fillColor: Colors.grey[100],
                         hintText: 'Search...',
-                        hintStyle:const TextStyle(
+                        hintStyle: const TextStyle(
                           fontSize: 16,
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
@@ -208,8 +219,6 @@ class HomePage extends StatelessWidget {
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     childAspectRatio: 0.5,
-                    // crossAxisSpacing: 8.0,
-                    // mainAxisSpacing: 3.0,
                     crossAxisCount: 2,
                   ),
                   itemCount: productImage.length,
@@ -219,14 +228,28 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: 160,
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.grey[100],
-                            ),
-                            child: Image.asset(productImage[index]),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 160,
+                                height: 250,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.grey[100],
+                                ),
+                                child: Image.asset(productImage[index]),
+                              ),
+                              Positioned(
+                                right: 0,
+                                child: IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      CupertinoIcons.heart,
+                                      size: 30,
+                                      color: Colors.grey,
+                                    )),
+                              ),
+                            ],
                           ),
                           SizedBox(
                             height: 10,

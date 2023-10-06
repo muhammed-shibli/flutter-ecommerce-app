@@ -12,14 +12,20 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ElevatedButton(
-          onPressed: () {},
-          child: Text("Checkout",
-              style: TextStyle(color: Colors.white, fontSize: 17)),
-          style: ButtonStyle(
-              shape: MaterialStatePropertyAll(BeveledRectangleBorder(
-                  borderRadius: BorderRadius.circular(0))),
-              backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
-              fixedSize: MaterialStatePropertyAll(Size(double.infinity, 50)))),
+        onPressed: () {},
+        child: Text(
+          "Checkout",
+          style: TextStyle(color: Colors.white, fontSize: 17),
+        ),
+        style: ButtonStyle(
+          shape: MaterialStatePropertyAll(
+              BeveledRectangleBorder(borderRadius: BorderRadius.circular(0))),
+          backgroundColor: MaterialStatePropertyAll(Colors.deepPurple),
+          fixedSize: MaterialStatePropertyAll(
+            Size(double.infinity, 50),
+          ),
+        ),
+      ),
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),

@@ -12,11 +12,8 @@ class AddressPage extends StatefulWidget {
 class _AddressPageState extends State<AddressPage> {
   TextEditingController nameTextController = TextEditingController();
   TextEditingController countryController = TextEditingController();
-
   TextEditingController cityController = TextEditingController();
-
   TextEditingController phoneNumberController = TextEditingController();
-
   TextEditingController addressController = TextEditingController();
 
   bool isClicked = false;
